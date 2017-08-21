@@ -1,15 +1,19 @@
+const printBoard = board => {
+    // Log 'Current Board: '
+    console.log('Current Board: ')
+    // Log the first, second and third element of the board variable
+    console.log(board[0].join(' | '))
+    console.log(board[1].join(' | '))
+    console.log(board[2].join(' | '))
+}
 
-const blackLine = '  |   |  '
-console.log('This is what an empty board would look like:')
+const board = [
+    ['', '', ''], 
+    ['', '', ''], 
+    ['', '', '']
+]
 
-console.log(blackLine)
-console.log(blackLine)
-console.log(blackLine)
-
-const guessLine = '1 |   |  '
-const bombLine = '  | B |  '
-console.log('This is what a board with a guess and a bomb on it would look like:')
-
-console.log(guessLine)
-console.log(bombLine)
-console.log(blackLine)
+printBoard(board);
+board[0][1] = '1'
+board[2][2] = 'B'
+printBoard(board);
